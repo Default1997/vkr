@@ -1,0 +1,32 @@
+# Site settings
+## Change the values as needed.
+title: Новостной блог
+
+description: "A jekyll theme implementing material design by using muicss."
+keywords: "jekyll, theme, material, muicss"
+url: "http://bitwiser.in/bitwiser-material" # the base hostname & protocol for your site
+plugins: [jekyll-paginate]
+baseurl: "" # the subpath of your site, e.g. /blog/
+paginate: 3
+paginate_path: "page:num"
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: :compressed
+links:
+  vk:id146341441
+exclude:
+  - bower_components
+  - README.md
+full_name: Brijesh
+
+##set this to enable disqus commenting
+disqus: bitwiser
+
+##set this to enable google analytics
+#ga_id: analyticsID
+#ga_domain: bitwiser.in

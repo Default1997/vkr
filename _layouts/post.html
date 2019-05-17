@@ -1,0 +1,48 @@
+---
+layout: base
+---
+<body style="padding: 0">
+	<article class="post-full">
+    <header class="bg-holder post-page {% if page.color %}bg-{{ page.color }}{% endif %}" style="{% if page.cover %}background:url({{page.cover}}) no-repeat center center; background-size: cover{% endif %}">
+		<a href="{{site.url}}/" class="overlay"><i class="fa fa-home fa-2x"></i></a>
+		<div class="img-overlay"></div>
+		<!-- Put this script tag to the <head> of your page -->
+		<script type="text/javascript" src="https://vk.com/js/api/share.js?95" charset="windows-1251"></script>
+		
+		<!-- Put this script tag to the <head> of your page -->
+		<script type="text/javascript" src="https://vk.com/js/api/openapi.js?160"></script>
+		
+    </header>
+    <div class="mui-container mui-panel post-content">
+		<h1 class="article-title"><a href="{{page.url}}">{{ page.title }}</a></h1>
+		<p class="post-meta"> <a href="{{ site.url }}">
+		</a><time datetime="{{ page.date | date: "%Y-%m-%dT%H:%M" }}"><i class="fa fa-calendar"></i>{{ page.date | date: "%d.%m.%Y" }}</time>
+		<span class="sharer">
+        Поделится: 
+		<!-- Put this script tag to the place, where the Share button will be -->
+		<script type="text/javascript"><!--
+		document.write(VK.Share.button(false,{type: "custom", text: "<img src=\"https://vk.com/images/share_32.png\" width=\"32\" height=\"32\" />"}));
+		</script>
+        </span>
+		</p>
+        <p class="post-tag-container">
+            {% for tag in page.tags %}
+            <span class="post-tag"><i class="fa fa-tag"></i>{{ tag }}</span>
+            {% endfor %}
+        </p>
+		<div class="post-html">
+			{{ content }}
+		</div>
+	</div>
+	
+		<footer>
+			<script type="text/javascript">VK.init({apiId: API_ID, onlyWidgets: true});</script>
+			<!-- Put this div tag to the place, where the Comments block will be -->
+			<div id="vk_comments"></div>
+			<script type="text/javascript">
+			VK.Widgets.Comments("vk_comments", {limit: 5, attach: "*"});
+		</script>
+	  </footer>
+  </article>
+
+
