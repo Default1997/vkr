@@ -4,9 +4,9 @@ title: Новостной блог
 
 description: "A jekyll theme implementing material design by using muicss."
 keywords: "jekyll, theme, material, muicss"
-url: "default1997.github.io" # the base hostname & protocol for your site
+url: "" # the base hostname & protocol for your site
 plugins: [jekyll-paginate]
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "default1997.github.io" # the subpath of your site, e.g. /blog/
 paginate: 3
 paginate_path: "page:num"
 # Build settings
